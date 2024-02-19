@@ -12,12 +12,13 @@ run()
 async function run(){
 
     try {
-        const user= await User.create({name:"Megi",age:23,
+        const user= await User.create({name:"Megi",age:22,
         email:"Megireddy21@gmail.com",
         hobbies:["Weight Lifting","Bowling","cricketing"],address:{
             street:"Main st",
             city:"New York"
         }})
+        // await User.deleteMany({name:"megi"})
         console.log(user)
         
     } catch (error) {
