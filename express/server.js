@@ -3,14 +3,16 @@ const app=express()
 
 app.set('view engine','ejs')
 
-app.get('/',(req,res)=>{
-    console.log("App get success");
-    res.render("index",{text:"world"})
-})
+// app.get('/',(req,res)=>{
+//     console.log("App get success");
+//     res.render("index",{text:"world"})
+// })
+app.use(express.static("public"))
 
 const userRouter=require('./routes/users')
 
 app.use('/users',userRouter)
+
 
 app.listen(3000,()=>{
     console.log("App listening to port 3000");
