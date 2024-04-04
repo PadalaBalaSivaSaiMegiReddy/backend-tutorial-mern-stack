@@ -21,6 +21,11 @@ app.get("/posts",(req,res)=>{
     res.json(posts)
 })
 
+app.get('/login',(req,res)=>{
+    //Authenticate User
+    
+})
+
 app.listen("3000",()=>{
     console.log("listening")
 })
