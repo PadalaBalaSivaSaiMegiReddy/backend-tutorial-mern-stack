@@ -1,5 +1,9 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
 const app = express();
+
+app.use(express.json());
+
 
 
 const posts =[
@@ -21,8 +25,13 @@ app.get("/posts",(req,res)=>{
     res.json(posts)
 })
 
-app.get('/login',(req,res)=>{
+app.post('/login',(req,res)=>{
     //Authenticate User
+
+
+    const username = req.body.username
+
+    
     
 })
 
